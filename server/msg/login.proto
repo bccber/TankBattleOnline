@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package msg;
+
+message Player {
+	string Name=1;        		// 玩家名称
+	int32 RoomId=2;      			// 玩家当前所在房间号
+	float X=3;       					// 坐标X
+	float Y=4;      					// 坐标Y
+	int32 Direction=5;  			// 方向 0上 1右 2下 3左
+}
+
+message LoginRequest {
+}
+
+message MatchCompleteBroadCast {
+	int32 MatchState = 1;
+	int32 Seed = 2;
+	int32 RoomId = 3;
+	string CurrentPlayerName = 4;
+	Player Player1 = 5;
+	Player Player2 = 6;
+}
+
+message HeartbeatRequest {
+	int32 RoomId = 1;
+	string Name = 2;
+}
+
+message OfflineBroadCast {
+	int32 RoomId = 1;
+	string Name = 2;
+}

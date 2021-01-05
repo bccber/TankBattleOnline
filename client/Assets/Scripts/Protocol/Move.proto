@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package Protocol;
+
+message PlayerMoveBroadCast {
+	string Name=1;
+	int32 RoomId=2;
+	float X=3;
+	float Y=4;
+	int32 Direction=5;  // 方向 0上 1右 2下 3左
+}

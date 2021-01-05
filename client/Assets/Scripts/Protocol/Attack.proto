@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package Protocol;
+
+message AttackBroadCast {
+	string Name = 1;
+	int32 RoomId = 2;
+}
